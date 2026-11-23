@@ -50,23 +50,23 @@ Single-project frontend: `src/` for application code, colocated `*.test.ts[x]` b
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T011 Define all content entity types in `src/domain/types.ts` per `contracts/content-schema.md`
-- [ ] T012 Implement `getResidentCountries` and `getCountry` in `src/domain/selectors.ts`
-- [ ] T013 Implement `getHabitatsFor` and `getSourcesFor` in `src/domain/selectors.ts`
-- [ ] T014 Implement `formatEstimate` returning the no-estimate text for `kind: 'none'` in `src/domain/selectors.ts`
-- [ ] T015 Implement `getHistoricalPresenceNote` in `src/domain/selectors.ts`
-- [ ] T016 Write unit tests for every selector in `src/domain/selectors.test.ts`
-- [ ] T017 Implement the invariant predicate helpers in `src/domain/invariants.ts`
-- [ ] T018 Create the empty typed source registry in `src/content/sources.ts`
-- [ ] T019 Implement the `Section` landmark primitive in `src/components/Section.tsx`
-- [ ] T020 Test `Section` renders its landmark with an accessible name in `src/components/Section.test.tsx`
-- [ ] T021 Implement the `ExternalLink` primitive with `rel="noreferrer noopener"` in `src/components/ExternalLink.tsx`
-- [ ] T022 Test `ExternalLink` opens safely and exposes its label in `src/components/ExternalLink.test.tsx`
-- [ ] T023 Implement the `Figure` primitive with reserved aspect ratio in `src/components/Figure.tsx`
-- [ ] T024 Test `Figure` reserves dimensions and renders alt text in `src/components/Figure.test.tsx`
+- [x] T011 Define all content entity types in `src/domain/types.ts` per `contracts/content-schema.md`
+- [x] T012 Implement `getResidentCountries` and `getCountry` in `src/domain/selectors.ts`
+- [x] T013 Implement `getHabitatsFor` and `getSourcesFor` in `src/domain/selectors.ts`
+- [x] T014 Implement `formatEstimate` returning the no-estimate text for `kind: 'none'` in `src/domain/selectors.ts`
+- [x] T015 Implement `getHistoricalPresenceNote` in `src/domain/selectors.ts`
+- [x] T016 Write unit tests for every selector in `src/domain/selectors.test.ts`
+- [x] T017 Implement the invariant predicate helpers in `src/domain/invariants.ts`
+- [x] T018 Create the empty typed source registry in `src/content/sources.ts`
+- [x] T019 Implement the `Section` landmark primitive in `src/components/Section.tsx`
+- [x] T020 Test `Section` renders its landmark with an accessible name in `src/components/Section.test.tsx`
+- [x] T021 Implement the `ExternalLink` primitive with `rel="noreferrer noopener"` in `src/components/ExternalLink.tsx`
+- [x] T022 Test `ExternalLink` opens safely and exposes its label in `src/components/ExternalLink.test.tsx`
+- [x] T023 Implement the `Figure` primitive with reserved aspect ratio in `src/components/Figure.tsx`
+- [x] T024 Test `Figure` reserves dimensions and renders alt text in `src/components/Figure.test.tsx`
 - [ ] T025 Create the page shell with all region landmarks in `src/app/App.tsx`
 - [ ] T026 Test the shell renders every region in order in `src/app/App.test.tsx`
-- [ ] T027 Add the responsive map/panel grid (stacked under 1024 px) in `src/app/app.css`
+- [x] T027 Add the responsive map/panel grid (stacked under 1024 px) in `src/app/app.css`
 
 **Checkpoint**: Types, primitives, and shell ready — user stories can start.
 
