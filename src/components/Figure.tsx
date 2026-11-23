@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import type { Photograph } from '../domain/types'
 import styles from './figure.module.css'
 
@@ -8,6 +9,8 @@ export interface FigureProps {
 }
 
 export function Figure({ photo, eager = false, className }: FigureProps) {
+  const [failed, setFailed] = useState(false)
+
   const image = (
     <img
       className={styles.image}
@@ -17,6 +20,9 @@ export function Figure({ photo, eager = false, className }: FigureProps) {
       height={photo.height}
       loading={eager ? 'eager' : 'lazy'}
       decoding="async"
+      onError={() => {
+        setFailed(true)
+      }}
     />
   )
 
@@ -26,7 +32,12 @@ export function Figure({ photo, eager = false, className }: FigureProps) {
         className={styles.media}
         style={{ aspectRatio: `${String(photo.width)} / ${String(photo.height)}` }}
       >
-        {photo.srcAvif ? (
+        {failed ? (
+          <div className={styles.fallback}>
+            <p className={styles.fallbackText}>Imagen no disponible</p>
+            <span className="visually-hidden">{photo.alt}</span>
+          </div>
+        ) : photo.srcAvif ? (
           <picture>
             <source type="image/avif" srcSet={photo.srcAvif} />
             {image}

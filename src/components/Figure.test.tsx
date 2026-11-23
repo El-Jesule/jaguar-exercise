@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { Figure } from './Figure'
 import type { Photograph } from '../domain/types'
@@ -41,5 +41,17 @@ describe('Figure', () => {
     render(<Figure photo={photo} eager />)
 
     expect(screen.getByRole('img', { name: photo.alt })).toHaveAttribute('loading', 'eager')
+  })
+
+  it('keeps the caption, credit, and description when the image fails to load', () => {
+    render(<Figure photo={photo} />)
+
+    fireEvent.error(screen.getByRole('img', { name: photo.alt }))
+
+    expect(screen.queryByRole('img')).not.toBeInTheDocument()
+    expect(screen.getByText('Imagen no disponible')).toBeInTheDocument()
+    expect(screen.getByText(photo.alt)).toBeInTheDocument()
+    expect(screen.getByText('Jaguar junto al río')).toBeInTheDocument()
+    expect(screen.getByText(/Ana Pérez/)).toBeInTheDocument()
   })
 })
