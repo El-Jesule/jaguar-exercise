@@ -1,3 +1,5 @@
+import fs from 'node:fs'
+import path from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { atlasContent } from '.'
 import { validateContent } from '../domain/invariants'
@@ -40,6 +42,13 @@ describe('country content', () => {
   it('has at least five sourced prey items and six credited photos', () => {
     expect(atlasContent.prey.length).toBeGreaterThanOrEqual(5)
     expect(atlasContent.photos.length).toBeGreaterThanOrEqual(6)
+  })
+
+  it('INV-13: every photo file exists on disk', () => {
+    for (const photo of atlasContent.photos) {
+      const relative = photo.src.replace(/^\//, '')
+      expect(fs.existsSync(path.resolve('public', relative))).toBe(true)
+    }
   })
 
   it('resolves every country habitat', () => {
