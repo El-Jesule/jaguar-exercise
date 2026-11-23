@@ -2,7 +2,15 @@ import { describe, expect, it } from 'vitest'
 import type { AtlasContent } from './invariants'
 import { validateContent } from './invariants'
 import { RESIDENT_COUNTRY_IDS } from './types'
-import type { Curiosity, HabitatType, Photograph, PreyItem, RangeCountry, Source } from './types'
+import type {
+  Curiosity,
+  HabitatType,
+  HuntingContent,
+  Photograph,
+  PreyItem,
+  RangeCountry,
+  Source,
+} from './types'
 
 const CURRENT_YEAR = 2026
 
@@ -69,6 +77,14 @@ const photos: readonly Photograph[] = Array.from({ length: 6 }, (_, index) => ({
   licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
 }))
 
+const hunting: HuntingContent = {
+  intro: 'Intro de caza.',
+  sourceIds: ['iucn-2017'],
+  behaviors: [
+    { id: 'ambush', title: 'Emboscada', body: 'Acecha y ataca de cerca.', sourceIds: ['iucn-2017'] },
+  ],
+}
+
 function makeContent(overrides: Partial<AtlasContent> = {}): AtlasContent {
   return {
     countries: RESIDENT_COUNTRY_IDS.map(makeCountry),
@@ -77,6 +93,7 @@ function makeContent(overrides: Partial<AtlasContent> = {}): AtlasContent {
     curiosities,
     prey,
     photos,
+    hunting,
     ...overrides,
   }
 }

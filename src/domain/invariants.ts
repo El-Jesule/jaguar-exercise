@@ -1,6 +1,7 @@
 import type {
   Curiosity,
   HabitatType,
+  HuntingContent,
   Photograph,
   PopulationEstimate,
   PreyItem,
@@ -16,6 +17,7 @@ export interface AtlasContent {
   readonly curiosities: readonly Curiosity[]
   readonly prey: readonly PreyItem[]
   readonly photos: readonly Photograph[]
+  readonly hunting: HuntingContent
 }
 
 const MIN_CURIOSITIES = 8
@@ -73,6 +75,12 @@ function collectSourceIds(content: AtlasContent): readonly string[] {
 
   for (const prey of content.prey) {
     prey.sourceIds.forEach((id) => ids.add(id))
+  }
+
+  content.hunting.sourceIds.forEach((id) => ids.add(id))
+
+  for (const behavior of content.hunting.behaviors) {
+    behavior.sourceIds.forEach((id) => ids.add(id))
   }
 
   return [...ids]
@@ -277,6 +285,8 @@ export function validateContent(content: AtlasContent, currentYear = new Date().
     ...content.countries.map((country) => country.conservationNote),
     ...content.curiosities.map((curiosity) => curiosity.body),
     ...content.prey.map((prey) => prey.description),
+    content.hunting.intro,
+    ...content.hunting.behaviors.map((behavior) => behavior.body),
   ]
 
   for (const text of narrativeTexts) {

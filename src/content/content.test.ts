@@ -3,17 +3,13 @@ import { atlasContent } from '.'
 import { validateContent } from '../domain/invariants'
 import { getResidentCountries, getSourcesFor, getHabitatsFor } from '../domain/selectors'
 
-const DEFERRED = /^INV-0[789]/
-
 describe('country content', () => {
   it('contains exactly the 18 resident range countries', () => {
     expect(getResidentCountries(atlasContent.countries)).toHaveLength(18)
   })
 
-  it('satisfies every content invariant that concerns countries and sources', () => {
-    const problems = validateContent(atlasContent).filter((problem) => !DEFERRED.test(problem))
-
-    expect(problems).toEqual([])
+  it('satisfies every content invariant', () => {
+    expect(validateContent(atlasContent)).toEqual([])
   })
 
   it('exposes Mexican estimate with its year and source', () => {
@@ -35,6 +31,15 @@ describe('country content', () => {
 
     expect(usa?.rangeStatus).toBe('historical')
     expect(usa?.estimate.kind).toBe('none')
+  })
+
+  it('has at least eight sourced curiosities', () => {
+    expect(atlasContent.curiosities.length).toBeGreaterThanOrEqual(8)
+  })
+
+  it('has at least five sourced prey items and six credited photos', () => {
+    expect(atlasContent.prey.length).toBeGreaterThanOrEqual(5)
+    expect(atlasContent.photos.length).toBeGreaterThanOrEqual(6)
   })
 
   it('resolves every country habitat', () => {

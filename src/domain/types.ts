@@ -101,6 +101,17 @@ export interface PreyItem extends SourcedClaim {
   readonly description: string
 }
 
+export interface HuntingBehavior extends SourcedClaim {
+  readonly id: string
+  readonly title: string
+  readonly body: string
+}
+
+export interface HuntingContent extends SourcedClaim {
+  readonly intro: string
+  readonly behaviors: readonly HuntingBehavior[]
+}
+
 export interface Photograph {
   readonly id: string
   readonly src: string
