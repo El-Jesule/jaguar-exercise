@@ -1,0 +1,46 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  width: min(100% - 2 * var(--space-4), var(--max-width));
+  margin: 0 auto;
+  padding: var(--space-6) 0 var(--space-2);
+  display: grid;
+  gap: var(--space-2);
+}
+
+.brand {
+  margin: 0;
+  font-size: var(--text-xs);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.heading {
+  font-size: var(--text-hero);
+  max-width: 22ch;
+}
+
+.lede {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+}
+
+.footer {
+  width: min(100% - 2 * var(--space-4), var(--max-width));
+  margin: 0 auto;
+  padding: var(--space-5) 0 var(--space-6);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.footer p {
+  margin: 0;
+}

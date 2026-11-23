@@ -1,0 +1,49 @@
+.map {
+  display: block;
+  width: 100%;
+  height: auto;
+  background:
+    radial-gradient(ellipse at 40% 35%, #16352a 0%, #0d1f18 55%, #0a1712 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.country,
+.countrySelected {
+  cursor: pointer;
+  outline: none;
+}
+
+.shape {
+  fill: #2f5e45;
+  stroke: #0b1712;
+  stroke-width: 1;
+  transition: fill 140ms ease;
+}
+
+.country:hover .shape {
+  fill: #3d7557;
+}
+
+.countrySelected .shape {
+  fill: var(--color-accent);
+  stroke: #5c4405;
+}
+
+.country:focus-visible .shape {
+  stroke: var(--color-focus);
+  stroke-width: 3;
+}
+
+.countrySelected:focus-visible .shape {
+  stroke: #1b1405;
+  stroke-width: 3;
+  filter: drop-shadow(0 0 4px var(--color-focus));
+}
+
+.hint {
+  margin: var(--space-2) 0 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}

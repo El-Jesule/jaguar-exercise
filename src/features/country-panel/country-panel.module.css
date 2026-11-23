@@ -1,0 +1,74 @@
+.panel {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: linear-gradient(180deg, var(--color-surface-raised), var(--color-surface));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  align-content: start;
+}
+
+.title {
+  font-size: var(--text-xl);
+}
+
+.empty {
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.estimate {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.headline {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--color-accent-strong);
+}
+
+.detail {
+  margin: 0;
+  font-weight: 600;
+}
+
+.scope {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.block {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.blockTitle {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.habitatList,
+.citationList {
+  margin: 0;
+  padding-left: var(--space-5);
+  display: grid;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+}
+
+.note {
+  margin: 0;
+  font-size: var(--text-sm);
+}
+
+.citationMeta {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
