@@ -31,16 +31,16 @@ Single-project frontend: `src/` for application code, colocated `*.test.ts[x]` b
 
 **Purpose**: Project initialization and tooling
 
-- [ ] T001 Create the Vite + React + TypeScript project scaffold in `package.json` and `index.html`
-- [ ] T002 Enable `strict` TypeScript settings in `tsconfig.json`
-- [ ] T003 Configure ESLint with typescript-eslint and react-hooks rules in `eslint.config.js`
-- [ ] T004 Configure Prettier in `.prettierrc.json`
-- [ ] T005 Configure Vitest with jsdom and a setup file in `vitest.config.ts` and `src/test/setup.ts`
-- [ ] T006 Configure Playwright with a local preview server in `playwright.config.ts`
-- [ ] T007 Add `dev`, `build`, `preview`, `lint`, `typecheck`, `test`, and `test:e2e` scripts to `package.json`
-- [ ] T008 Create the folder skeleton (`src/domain`, `src/content`, `src/features`, `src/components`, `src/assets/photos`, `tests/e2e`) with `.gitkeep` placeholders
-- [ ] T009 Add design tokens and global styles (colors, spacing, type scale, focus ring) in `src/app/app.css`
-- [ ] T010 Set `lang="es"`, title, and meta description in `index.html`
+- [x] T001 Create the Vite + React + TypeScript project scaffold in `package.json` and `index.html`
+- [x] T002 Enable `strict` TypeScript settings in `tsconfig.json`
+- [x] T003 Configure ESLint with typescript-eslint and react-hooks rules in `eslint.config.js`
+- [x] T004 Configure Prettier in `.prettierrc.json`
+- [x] T005 Configure Vitest with jsdom and a setup file in `vitest.config.ts` and `src/test/setup.ts`
+- [x] T006 Configure Playwright with a local preview server in `playwright.config.ts`
+- [x] T007 Add `dev`, `build`, `preview`, `lint`, `typecheck`, `test`, and `test:e2e` scripts to `package.json`
+- [x] T008 Create the folder skeleton (`src/domain`, `src/content`, `src/features`, `src/components`, `public/photos`, `tests/e2e`) with `.gitkeep` placeholders
+- [x] T009 Add design tokens and global styles (colors, spacing, type scale, focus ring) in `src/app/app.css`
+- [x] T010 Set `lang="es"`, title, and meta description in `index.html`
 
 ---
 
@@ -140,26 +140,26 @@ count at least eight sourced curiosities and six credited, described photos.
 
 ### Tests for User Story 2 (write first, must fail) ⚠️
 
-- [ ] T065 [P] [US2] Write a failing test that the hero statement is visible on first render in `src/features/hero/Hero.test.tsx`
-- [ ] T066 [P] [US2] Write a failing test for at least eight curiosities, each with a source link, in `src/features/curiosities/CuriositiesSection.test.tsx`
-- [ ] T067 [P] [US2] Write a failing test for at least six photos with alt, credit, and license in `src/features/gallery/PhotoGallery.test.tsx`
-- [ ] T068 [P] [US2] Write a failing test that a broken image keeps its caption and credit visible in `src/components/Figure.test.tsx`
-- [ ] T069 [P] [US2] Write a failing axe test for hero, curiosities, and gallery in `src/features/gallery/a11y.test.tsx`
+- [x] T065 [P] [US2] Write a failing test that the hero statement is visible on first render in `src/features/hero/Hero.test.tsx`
+- [x] T066 [P] [US2] Write a failing test for at least eight curiosities, each with a source link, in `src/features/curiosities/CuriositiesSection.test.tsx`
+- [x] T067 [P] [US2] Write a failing test for at least six photos with alt, credit, and license in `src/features/gallery/PhotoGallery.test.tsx`
+- [x] T068 [P] [US2] Write a failing test that a broken image keeps its caption and credit visible in `src/components/Figure.test.tsx`
+- [x] T069 [P] [US2] Write a failing axe test for hero, curiosities, and gallery in `src/features/gallery/a11y.test.tsx`
 
 ### Implementation for User Story 2
 
-- [ ] T070 [US2] Implement the hero block with the "mejor felino del planeta" statement in `src/features/hero/Hero.tsx`
-- [ ] T071 [P] [US2] Write eight-plus sourced curiosities in `src/content/curiosities.ts`
-- [ ] T072 [US2] Implement the curiosity card with its source link in `src/features/curiosities/CuriosityCard.tsx`
-- [ ] T073 [US2] Implement the curiosities section wrapper in `src/features/curiosities/CuriositiesSection.tsx`
-- [ ] T074 [P] [US2] Source, license-check, and commit at least six photographs to `src/assets/photos/`
-- [ ] T075 [US2] Write photo metadata (credit, license, license URL, alt, dimensions) in `src/content/photos.ts`
-- [ ] T076 [US2] Implement the gallery grid with reserved aspect ratios in `src/features/gallery/PhotoGallery.tsx`
-- [ ] T077 [US2] Add lazy loading and optional AVIF source handling in `src/components/Figure.tsx`
-- [ ] T078 [US2] Add the image-error fallback that preserves caption and credit in `src/components/Figure.tsx`
-- [ ] T079 [US2] Mount hero, curiosities, and gallery in `src/app/App.tsx`
-- [ ] T080 [US2] Add an E2E check that curiosity sources are reachable links in `tests/e2e/content-provenance.spec.ts`
-- [ ] T081 [US2] Run `npm test`, `npm run typecheck`, and `npm run lint` and fix failures across `src/`
+- [x] T070 [US2] Implement the hero block with the "mejor felino del planeta" statement in `src/features/hero/Hero.tsx`
+- [x] T071 [P] [US2] Write eight-plus sourced curiosities in `src/content/curiosities.ts`
+- [x] T072 [US2] Implement the curiosity card with its source link in `src/features/curiosities/CuriosityCard.tsx`
+- [x] T073 [US2] Implement the curiosities section wrapper in `src/features/curiosities/CuriositiesSection.tsx`
+- [x] T074 [P] [US2] Source, license-check, and commit at least six photographs to `src/assets/photos/`
+- [x] T075 [US2] Write photo metadata (credit, license, license URL, alt, dimensions) in `src/content/photos.ts`
+- [x] T076 [US2] Implement the gallery grid with reserved aspect ratios in `src/features/gallery/PhotoGallery.tsx`
+- [x] T077 [US2] Add lazy loading and optional AVIF source handling in `src/components/Figure.tsx`
+- [x] T078 [US2] Add the image-error fallback that preserves caption and credit in `src/components/Figure.tsx`
+- [x] T079 [US2] Mount hero, curiosities, and gallery in `src/app/App.tsx`
+- [x] T080 [US2] Add an E2E check that curiosity sources are reachable links in `tests/e2e/content-provenance.spec.ts`
+- [x] T081 [US2] Run `npm test`, `npm run typecheck`, and `npm run lint` and fix failures across `src/`
 
 **Checkpoint**: User Story 2 works independently of User Story 3.
 
@@ -174,19 +174,19 @@ skull-or-neck bite, swimming, and activity periods, and lists at least five sour
 
 ### Tests for User Story 3 (write first, must fail) ⚠️
 
-- [ ] T082 [P] [US3] Write a failing test that the hunting method covers the four required points in `src/features/hunting/HuntingSection.test.tsx`
-- [ ] T083 [P] [US3] Write a failing test that at least five prey items render with category and source in `src/features/hunting/PreyList.test.tsx`
-- [ ] T084 [P] [US3] Write a failing axe test for the hunting section in `src/features/hunting/a11y.test.tsx`
+- [x] T082 [P] [US3] Write a failing test that the hunting method covers the four required points in `src/features/hunting/HuntingSection.test.tsx`
+- [x] T083 [P] [US3] Write a failing test that at least five prey items render with category and source in `src/features/hunting/PreyList.test.tsx`
+- [x] T084 [P] [US3] Write a failing axe test for the hunting section in `src/features/hunting/a11y.test.tsx`
 
 ### Implementation for User Story 3
 
-- [ ] T085 [P] [US3] Write the hunting method copy with sources in `src/content/hunting.ts`
-- [ ] T086 [P] [US3] Write at least five prey items with descriptions and sources in `src/content/prey.ts`
-- [ ] T087 [US3] Implement the hunting method block in `src/features/hunting/HuntingSection.tsx`
-- [ ] T088 [US3] Implement the prey list with category labels in `src/features/hunting/PreyList.tsx`
-- [ ] T089 [US3] Mount the hunting section in `src/app/App.tsx`
-- [ ] T090 [US3] Add hunting and prey sources to the aggregated sources section in `src/content/sources.ts`
-- [ ] T091 [US3] Run `npm test`, `npm run typecheck`, and `npm run lint` and fix failures across `src/`
+- [x] T085 [P] [US3] Write the hunting method copy with sources in `src/content/hunting.ts`
+- [x] T086 [P] [US3] Write at least five prey items with descriptions and sources in `src/content/prey.ts`
+- [x] T087 [US3] Implement the hunting method block in `src/features/hunting/HuntingSection.tsx`
+- [x] T088 [US3] Implement the prey list with category labels in `src/features/hunting/PreyList.tsx`
+- [x] T089 [US3] Mount the hunting section in `src/app/App.tsx`
+- [x] T090 [US3] Add hunting and prey sources to the aggregated sources section in `src/content/sources.ts`
+- [x] T091 [US3] Run `npm test`, `npm run typecheck`, and `npm run lint` and fix failures across `src/`
 
 **Checkpoint**: All three stories are independently functional.
 
@@ -196,17 +196,17 @@ skull-or-neck bite, swimming, and activity periods, and lists at least five sour
 
 **Purpose**: Quality gates, mobile behavior, performance, and end-to-end verification
 
-- [ ] T092 Verify and fix the 360 px layout with no horizontal scroll in `src/app/app.css`
-- [ ] T093 Add the `prefers-reduced-motion` disabling rule in `src/app/app.css`
-- [ ] T094 Write the INV-13 filesystem test that every photo file exists in `src/domain/invariants.test.ts`
-- [ ] T095 Add the initial-JS size budget assertion (≤ 200 KB gzip) in `scripts/check-bundle-size.mjs`
-- [ ] T096 Add the bundle-size check to the `build` script in `package.json`
-- [ ] T097 Run a full-page axe audit and fix findings in `src/features/`
-- [ ] T098 Verify no `localStorage`, cookie, or network call exists in `src/` with a source scan test in `src/app/app.test.ts`
-- [ ] T099 Add Firefox and WebKit to the Playwright projects in `playwright.config.ts`
-- [ ] T100 Document run commands and the data-provenance policy in `README.md`
-- [ ] T101 Execute quickstart scenarios V1..V12 and record results in `specs/001-jaguar-habitat-atlas/quickstart.md`
-- [ ] T102 Run the final gate (`lint`, `typecheck`, `test`, `test:e2e`, `build`) and fix any failure across `src/`
+- [x] T092 Verify and fix the 360 px layout with no horizontal scroll in `src/app/app.css`
+- [x] T093 Add the `prefers-reduced-motion` disabling rule in `src/app/app.css`
+- [x] T094 Write the INV-13 filesystem test that every photo file exists in `src/content/content.test.ts`
+- [x] T095 Add the initial-JS size budget assertion (≤ 200 KB gzip) in `scripts/check-bundle-size.mjs`
+- [x] T096 Add the bundle-size check to the `build` script in `package.json`
+- [x] T097 Run a full-page axe audit and fix findings in `src/features/`
+- [x] T098 Verify no `localStorage`, cookie, or network call exists in `src/` with a source scan test in `src/app/runtime-policy.test.ts`
+- [x] T099 Add Firefox and WebKit to the Playwright projects in `playwright.config.ts`
+- [x] T100 Document run commands and the data-provenance policy in `README.md`
+- [x] T101 Execute quickstart scenarios V1..V12 and record results in `specs/001-jaguar-habitat-atlas/quickstart.md`
+- [x] T102 Run the final gate (`lint`, `typecheck`, `test`, `test:e2e`, `build`) and fix any failure across `src/`
 
 ---
 
@@ -342,3 +342,42 @@ Task: "T082 hunting method test - src/features/hunting/HuntingSection.test.tsx"
 - Deferred as planned: US2 (hero statement, curiosities, gallery) and US3 (hunting, prey) are not
   started; the task list stays unchecked for them so the MVP can be reviewed first.
 
+
+### L2 — US2, US3 and polish complete (2026-11-23)
+
+**Gates observed (final)**
+
+- `npm run lint`: exit 0
+- `npm run typecheck`: exit 0
+- `npm test`: 25 files, 106 tests passed
+- `npm run test:e2e`: 36 passed (12 journeys x Chromium, Firefox, WebKit)
+- `npm run build`: success; initial JS 84.04 KB gzip against the 200 KB budget gate
+- Load check on the production build: FCP 1000 ms, hero heading visible at 1134 ms under
+  emulated Fast 3G plus 4x CPU throttling at 390x844
+
+**Evidence and decisions**
+
+- Photos: `scripts/fetch-photos.mjs` pulls a curated set from Wikimedia Commons, verifies the
+  license, resizes to 1400 px, encodes WebP, and records author, license, and license URL.
+  Six photos accepted (jaguars in the Pantanal: riverside, swimming, and in vegetation). A seventh
+  candidate was dropped after repeated HTTP 429 responses, so the pipeline stays reproducible.
+  Total photo weight is about 1.7 MB, all lazy-loaded below the fold.
+- `public/photos/` is the committed image location (the plan note about `src/assets/photos` was
+  updated): public assets keep stable URLs without bundling and let INV-13 check files on disk.
+- Curiosities: 10 sourced entries using Panthera, WCS, and WWF. No numeric claims were added to
+  narrative text, which keeps INV-14 green.
+- Hunting: `src/content/hunting.ts` adds a `HuntingContent` model (intro plus sourced behaviours);
+  `AtlasContent` now requires it, and INV-05/INV-14 cover its text and sources.
+- Prey: 9 items across mammal, reptile, fish, and livestock categories, each sourced.
+- The deferred INV-07/08/09 filter in `src/content/content.test.ts` was removed: the full
+  `validateContent(atlasContent)` now runs and returns no problems.
+- T094: INV-13 lives in `src/content/content.test.ts` rather than `src/domain/invariants.test.ts`
+  because it checks the real photo set against the filesystem.
+- T098: the runtime-policy scan is `src/app/runtime-policy.test.ts`. The task's original filename
+  `app.test.ts` collided case-insensitively with `App.test.tsx` on Windows and broke the typed
+  ESLint project service.
+- T093/T092/T099 are verified by Playwright rather than by hand: the reduced-motion check reads the
+  computed transition duration, and every journey runs on all three browser engines.
+- No figure was invented at any point. Mexico remains the only country with a published national
+  estimate in this dataset; the other 17 keep the explicit no-estimate state.
+- Remaining known gaps are recorded in `quickstart.md` under "Verification log".

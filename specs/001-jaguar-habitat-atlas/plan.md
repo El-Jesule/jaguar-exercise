@@ -124,7 +124,7 @@ src/
 │   ├── gallery/PhotoGallery.tsx
 │   └── sources/SourcesSection.tsx
 ├── components/                 # Shared primitives (Section, Figure, Badge, ExternalLink)
-└── assets/photos/              # Optimized WebP/AVIF images with fixed dimensions
+└── assets/photos/              # (unused; photos live in public/photos per research R5)
 
 tests/e2e/                      # Playwright journeys (not Playwright unit specs)
 ```

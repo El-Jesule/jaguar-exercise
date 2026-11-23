@@ -129,3 +129,37 @@ or `npm run preview`.
   when they disagree.
 - **A country shows `Sin estimación publicada` unexpectedly**: that is the correct behavior when no
   national estimate is published; verify the note names the covering source.
+
+## Verification log — 2026-11-23
+
+Observed on the implementation at branch `001-jaguar-habitat-atlas` (no git remote push).
+
+| Command | Result |
+|---------|--------|
+| `npm run lint` | exit 0 |
+| `npm run typecheck` | exit 0 |
+| `npm test` | 25 files, 106 tests passed |
+| `npm run test:e2e` | 36 passed (12 journeys x Chromium, Firefox, WebKit) |
+| `npm run build` | success; initial JS 84.04 KB gzip (budget 200 KB) |
+
+| Scenario | Result | How it was checked |
+|----------|--------|--------------------|
+| V1 two-interaction country info | PASS | E2E `country-exploration.spec.ts` |
+| V2 all 18 countries complete | PASS | E2E list counts 1 + 6 + 11; invariant INV-01 |
+| V3 every figure dated and sourced | PASS | Unit `CountryPanelEstimate` + invariant INV-03 |
+| V4 curiosities sourced | PASS | E2E `content-provenance.spec.ts`; invariant INV-07 |
+| V5 photos credited and described | PASS | E2E gallery check; invariants INV-09 and INV-13 |
+| V6 keyboard-only journey | PASS | E2E `keyboard-navigation.spec.ts` (all 18 countries) |
+| V7 360 px, no horizontal scroll | PASS | E2E `responsive.spec.ts` |
+| V8 best feline statement immediate | PASS | E2E `content-provenance.spec.ts`; `Hero.test.tsx` |
+| V9 hunting and prey | PASS | E2E hunting check; invariant INV-08 |
+| V10 no unsourced claims | PASS | Full `validateContent(atlasContent)` returns no problems |
+| V11 perceived load | PASS with caveat | FCP 1000 ms and heading visible at 1134 ms on the production build, emulating Fast 3G (1.6 Mbps, 150 ms latency) and 4x CPU throttling at 390x844. Not measured on physical devices. |
+| V12 reduced motion and re-selection | PASS | E2E reduced-motion check; `App.test.tsx` Escape and re-selection tests |
+
+Known gaps at the time of this log:
+
+- Population figures beyond Mexico are intentionally absent (no national estimate published), so
+  most panels show the explicit no-estimate state.
+- The WWF page returns HTTP 403 to automated requests while remaining reachable from a browser; the
+  IUCN species page was dropped because its URL returned 404 instead of being guessed.
