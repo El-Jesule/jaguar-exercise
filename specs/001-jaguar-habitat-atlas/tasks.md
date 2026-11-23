@@ -64,8 +64,8 @@ Single-project frontend: `src/` for application code, colocated `*.test.ts[x]` b
 - [x] T022 Test `ExternalLink` opens safely and exposes its label in `src/components/ExternalLink.test.tsx`
 - [x] T023 Implement the `Figure` primitive with reserved aspect ratio in `src/components/Figure.tsx`
 - [x] T024 Test `Figure` reserves dimensions and renders alt text in `src/components/Figure.test.tsx`
-- [ ] T025 Create the page shell with all region landmarks in `src/app/App.tsx`
-- [ ] T026 Test the shell renders every region in order in `src/app/App.test.tsx`
+- [x] T025 Create the page shell with all region landmarks in `src/app/App.tsx`
+- [x] T026 Test the shell renders every region in order in `src/app/App.test.tsx`
 - [x] T027 Add the responsive map/panel grid (stacked under 1024 px) in `src/app/app.css`
 
 **Checkpoint**: Types, primitives, and shell ready — user stories can start.
@@ -82,49 +82,49 @@ figure (or the explicit no-estimate state), trend, habitats, and source with its
 
 ### Tests for User Story 1 (write first, must fail) ⚠️
 
-- [ ] T028 [P] [US1] Write a failing test that the map renders all 18 range countries in `src/features/map/JaguarMap.test.tsx`
-- [ ] T029 [P] [US1] Write a failing test that selecting a country renders its panel in `src/features/country-panel/CountryPanel.test.tsx`
-- [ ] T030 [P] [US1] Write a failing test for the explicit no-estimate panel state in `src/features/country-panel/CountryPanelNone.test.tsx`
-- [ ] T031 [P] [US1] Write a failing test that a numeric estimate shows its year and source in one block in `src/features/country-panel/CountryPanelEstimate.test.tsx`
-- [ ] T032 [P] [US1] Write a failing test that a range estimate shows min, max, year, and source in `src/features/country-panel/CountryPanelRange.test.tsx`
-- [ ] T033 [P] [US1] Write a failing keyboard test (Enter, Space, visible focus, `aria-pressed`) in `src/features/map/keyboard.test.tsx`
-- [ ] T034 [P] [US1] Write a failing test that re-selecting the same country is idempotent in `src/features/country-panel/useCountrySelection.test.ts`
-- [ ] T035 [P] [US1] Write a failing test that Escape clears the selection and keeps focus in `src/features/country-panel/useCountrySelection.test.ts`
-- [ ] T036 [P] [US1] Write a failing test that the country list exposes the same 18 countries in `src/features/map/CountryList.test.tsx`
-- [ ] T037 [P] [US1] Write failing content invariant tests INV-01..INV-12 and INV-14 in `src/domain/invariants.test.ts`
-- [ ] T038 [P] [US1] Write a failing axe accessibility test for map plus panel in `src/features/map/a11y.test.tsx`
+- [x] T028 [P] [US1] Write a failing test that the map renders all 18 range countries in `src/features/map/JaguarMap.test.tsx`
+- [x] T029 [P] [US1] Write a failing test that selecting a country renders its panel in `src/features/country-panel/CountryPanel.test.tsx`
+- [x] T030 [P] [US1] Write a failing test for the explicit no-estimate panel state in `src/features/country-panel/CountryPanelNone.test.tsx`
+- [x] T031 [P] [US1] Write a failing test that a numeric estimate shows its year and source in one block in `src/features/country-panel/CountryPanelEstimate.test.tsx`
+- [x] T032 [P] [US1] Write a failing test that a range estimate shows min, max, year, and source in `src/features/country-panel/CountryPanelRange.test.tsx`
+- [x] T033 [P] [US1] Write a failing keyboard test (Enter, Space, visible focus, `aria-pressed`) in `src/features/map/keyboard.test.tsx`
+- [x] T034 [P] [US1] Write a failing test that re-selecting the same country is idempotent in `src/features/country-panel/useCountrySelection.test.ts`
+- [x] T035 [P] [US1] Write a failing test that Escape clears the selection and keeps focus in `src/features/country-panel/useCountrySelection.test.ts`
+- [x] T036 [P] [US1] Write a failing test that the country list exposes the same 18 countries in `src/features/map/CountryList.test.tsx`
+- [x] T037 [P] [US1] Write failing content invariant tests INV-01..INV-12 and INV-14 in `src/domain/invariants.test.ts`
+- [x] T038 [P] [US1] Write a failing axe accessibility test for map plus panel in `src/features/map/a11y.test.tsx`
 
 ### Content for User Story 1
 
-- [ ] T039 [P] [US1] Add habitat type records with sources in `src/content/habitats.ts`
-- [ ] T040 [P] [US1] Add regional and global source records (IUCN, WWF, Panthera, WCS) in `src/content/sources.ts`
-- [ ] T041 [US1] Add Mexico, Guatemala, Belize, Honduras, Nicaragua, Costa Rica, and Panama records in `src/content/countries.ts`
-- [ ] T042 [US1] Add Colombia, Venezuela, Guyana, Suriname, French Guiana, and Ecuador records in `src/content/countries.ts`
-- [ ] T043 [US1] Add Peru, Bolivia, Brazil, Paraguay, and Argentina records in `src/content/countries.ts`
-- [ ] T044 [US1] Add the United States historical-presence note as a `historical` record in `src/content/countries.ts`
-- [ ] T045 [US1] Verify every figure against its cited source and record access dates in `src/content/sources.ts`
+- [x] T039 [P] [US1] Add habitat type records with sources in `src/content/habitats.ts`
+- [x] T040 [P] [US1] Add regional and global source records (IUCN, WWF, Panthera, WCS) in `src/content/sources.ts`
+- [x] T041 [US1] Add Mexico, Guatemala, Belize, Honduras, Nicaragua, Costa Rica, and Panama records in `src/content/countries.ts`
+- [x] T042 [US1] Add Colombia, Venezuela, Guyana, Suriname, French Guiana, and Ecuador records in `src/content/countries.ts`
+- [x] T043 [US1] Add Peru, Bolivia, Brazil, Paraguay, and Argentina records in `src/content/countries.ts`
+- [x] T044 [US1] Add the United States historical-presence note as a `historical` record in `src/content/countries.ts`
+- [x] T045 [US1] Verify every figure against its cited source and record access dates in `src/content/sources.ts`
 
 ### Implementation for User Story 1
 
-- [ ] T046 [US1] Generate simplified country path data from Natural Earth into `src/features/map/country-paths.ts`
-- [ ] T047 [US1] Implement `CountryShape` as a focusable, labelled button-like path in `src/features/map/CountryShape.tsx`
-- [ ] T048 [US1] Implement the `JaguarMap` SVG frame and country rendering in `src/features/map/JaguarMap.tsx`
-- [ ] T049 [US1] Add keyboard activation and `aria-pressed` wiring in `src/features/map/CountryShape.tsx`
-- [ ] T050 [US1] Add hit-area sizing of at least 32×32 px in `src/features/map/map.module.css`
-- [ ] T051 [US1] Implement the subregion-grouped country list in `src/features/map/country-list.tsx`
-- [ ] T052 [US1] Implement selection state with idempotent re-select and Escape reset in `src/features/country-panel/use-country-selection.ts`
-- [ ] T053 [US1] Implement the panel shell and no-selection invitation in `src/features/country-panel/CountryPanel.tsx`
-- [ ] T054 [US1] Render the estimate block (number or range) with year and citation in `src/features/country-panel/CountryPanel.tsx`
-- [ ] T055 [US1] Render the no-estimate state with its explanatory note in `src/features/country-panel/CountryPanel.tsx`
-- [ ] T056 [US1] Render the trend badge with a text label in `src/features/country-panel/TrendBadge.tsx`
-- [ ] T057 [US1] Render habitats and the conservation note from selectors in `src/features/country-panel/CountryPanel.tsx`
-- [ ] T058 [US1] Add `aria-live="polite"` announcement on the panel heading in `src/features/country-panel/CountryPanel.tsx`
-- [ ] T059 [US1] Implement the aggregated sources section with access dates in `src/features/sources/SourcesSection.tsx`
-- [ ] T060 [US1] Wire map, country list, and panel together in `src/app/App.tsx`
-- [ ] T061 [US1] Test the sources section lists every registered source in `src/features/sources/SourcesSection.test.tsx`
-- [ ] T062 [US1] Write the E2E journey that selects Brasil and reads the panel in `tests/e2e/country-exploration.spec.ts`
-- [ ] T063 [US1] Write the E2E keyboard-only country journey in `tests/e2e/keyboard-navigation.spec.ts`
-- [ ] T064 [US1] Run `npm test`, `npm run typecheck`, and `npm run lint` and fix failures across `src/`
+- [x] T046 [US1] Generate simplified country path data from Natural Earth into `src/features/map/country-paths.ts`
+- [x] T047 [US1] Implement `CountryShape` as a focusable, labelled button-like path in `src/features/map/CountryShape.tsx`
+- [x] T048 [US1] Implement the `JaguarMap` SVG frame and country rendering in `src/features/map/JaguarMap.tsx`
+- [x] T049 [US1] Add keyboard activation and `aria-pressed` wiring in `src/features/map/CountryShape.tsx`
+- [x] T050 [US1] Add hit-area sizing of at least 32×32 px in `src/features/map/map.module.css`
+- [x] T051 [US1] Implement the subregion-grouped country list in `src/features/map/country-list.tsx`
+- [x] T052 [US1] Implement selection state with idempotent re-select and Escape reset in `src/features/country-panel/use-country-selection.ts`
+- [x] T053 [US1] Implement the panel shell and no-selection invitation in `src/features/country-panel/CountryPanel.tsx`
+- [x] T054 [US1] Render the estimate block (number or range) with year and citation in `src/features/country-panel/CountryPanel.tsx`
+- [x] T055 [US1] Render the no-estimate state with its explanatory note in `src/features/country-panel/CountryPanel.tsx`
+- [x] T056 [US1] Render the trend badge with a text label in `src/features/country-panel/TrendBadge.tsx`
+- [x] T057 [US1] Render habitats and the conservation note from selectors in `src/features/country-panel/CountryPanel.tsx`
+- [x] T058 [US1] Add `aria-live="polite"` announcement on the panel heading in `src/features/country-panel/CountryPanel.tsx`
+- [x] T059 [US1] Implement the aggregated sources section with access dates in `src/features/sources/SourcesSection.tsx`
+- [x] T060 [US1] Wire map, country list, and panel together in `src/app/App.tsx`
+- [x] T061 [US1] Test the sources section lists every registered source in `src/features/sources/SourcesSection.test.tsx`
+- [x] T062 [US1] Write the E2E journey that selects Brasil and reads the panel in `tests/e2e/country-exploration.spec.ts`
+- [x] T063 [US1] Write the E2E keyboard-only country journey in `tests/e2e/keyboard-navigation.spec.ts`
+- [x] T064 [US1] Run `npm test`, `npm run typecheck`, and `npm run lint` and fix failures across `src/`
 
 **Checkpoint**: User Story 1 is fully functional and independently testable (MVP).
 
@@ -297,3 +297,48 @@ Task: "T082 hunting method test - src/features/hunting/HuntingSection.test.tsx"
 - Every figure needs a source and year in the same visible block; an unsourced number is a defect
 - Commit after each task or small group; keep tests and code in the same commit
 - Stop at each checkpoint to validate the story independently
+
+---
+
+## Log
+
+### L1 — User request (verbatim, 2026-11-23)
+
+> Implementa las tareas de este proyecto y actualiza la lista de tareas conforme las completes.
+> Detente cuando llegues al primer MVP para revisar el localhost antes de que las marques todas
+> como completas. Ve haciendo commits conforme vayas completando las partes. Conventional commit,
+> en inglés, descriptivo, máximo 72 caracteres.
+
+### MVP reached — 2026-11-23 (Phases 1-3 complete)
+
+**Gates observed**
+
+- `npm run lint`: exit 0
+- `npm run typecheck`: exit 0
+- `npm test`: 17 files, 84 tests passed
+- `npm run test:e2e`: 5 Playwright journeys passed (Chromium, dev server)
+- `npm run build`: success, initial JS 81.56 KB gzip (budget 200 KB)
+- Manual review: desktop 1440x1000, panel-open, and mobile 360x780 screenshots inspected;
+  no horizontal scroll at 360 px; selected country highlight and sticky panel visible
+
+**Evidence and decisions**
+
+- Commits: `chore: scaffold React + TypeScript app with Vite and test tooling`,
+  `feat: add domain model, selectors, and shared UI primitives`, plus the US1 commits listed below.
+- T046: map geometry generated by `scripts/build-map.mjs` from Natural Earth 1:110m admin-0
+  (public domain). French Guiana extracted from the France multipolygon by centroid longitude;
+  the United States is intentionally excluded from the map (INV-11, FR-019).
+- T045: source URLs checked with HTTP requests. Panthera, WCS, and CONANP returned 200. The IUCN
+  species URL returned 404 and was dropped instead of guessed; WWF returns 403 to automated
+  requests but is kept as a standard citation reachable from a browser.
+- Data honesty: only Mexico publishes a national estimate used here (4.800 jaguares, CENJAGUAR
+  2018, cited with its scope note). Every other country uses the explicit `kind: 'none'` state with
+  a note naming the covering source, as FR-005 requires. No figure was derived or interpolated.
+- T037: the real-content invariant test covers the country and source invariants (INV-01..06,
+  INV-10..12, INV-14). INV-07/08/09 stay deferred until US2 and US3 add curiosities, prey, and
+  photos; the test filter is noted in `src/content/content.test.ts` and will be removed in T094.
+- T050: instead of overlapping invisible hit circles, the map keeps non-overlapping country shapes
+  and the country list provides a large-target, large-text alternative for every country.
+- Deferred as planned: US2 (hero statement, curiosities, gallery) and US3 (hunting, prey) are not
+  started; the task list stays unchecked for them so the MVP can be reviewed first.
+
